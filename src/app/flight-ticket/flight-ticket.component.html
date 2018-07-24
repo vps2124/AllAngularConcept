@@ -1,0 +1,17 @@
+<div>
+ 
+  
+  <h2>{{title}}</h2>
+
+  <table>
+    <tr>
+      <td><h2>From:</h2></td>
+      <td><h2><input name="from" [(ngModel)]="from"/></h2></td>
+    </tr>
+    <tr>
+      <td><h2>To:</h2></td>
+      <td><h2><input name="to" [(ngModel)]="to"/></h2></td>
+    </tr>
+  </table>
+  <a  [routerLink]="['/casestudy/todos']"  [queryParams]="{'userId':u.id}"  ><input type="button" value="VIEW TODOS" class="btn btn-info"></a>   
+  </div>

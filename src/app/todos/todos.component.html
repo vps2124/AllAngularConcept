@@ -1,0 +1,26 @@
+<div class="container">
+  
+  <div class="row">
+  
+    <table class="table table-bordered table-striped table-hover table-responsive">
+  <caption> <h3>  {{title}}</h3>  </caption>
+      <thead>
+  <tr>
+      <th>User ID</th>
+      <th>TODO ID</th>
+      <th>TITLE</th>
+      <th>COMPLETED</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of todos"    [ngClass]="{'completed':t.completed}" >
+      <td>{{t.userId}}</td>
+      <td>{{t.id}}</td>
+      <td>{{t.title}}</td>
+      <td>{{t.completed}}</td>
+    </tr>
+   </tbody>
+   </table>
+  </div>
+  </div>
+  

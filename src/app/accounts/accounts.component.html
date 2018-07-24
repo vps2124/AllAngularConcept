@@ -1,0 +1,69 @@
+<div class="container">
+  
+<div  *ngIf="account" class="col-md-6">
+  <table class="table table-bordered table-striped table-hover table-responsive">
+    <caption> <h3>Account Form </h3>  </caption>
+    
+    <tbody>
+      <tr>
+        <th>ACCNO</th>
+        <td><input name="accno" [(ngModel)]="account.accno"></td>
+      </tr>
+      <tr>
+        <th>NAME</th>
+        <td><input name="name" [(ngModel)]="account.name"></td>
+      </tr>
+      <tr>
+        <th>BALANCE</th>
+        <td><input name="balance" [(ngModel)]="account.balance"></td>
+      </tr>
+  <tr>
+    <td><input type="button" value="ADD"  [disabled]="add"   (click)="addAccount()"  class="btn btn-success"></td>
+    <td><input type="button" value="SAVE" [disabled]="edit"  (click)="updateAccount()"  class="btn btn-info"></td>
+   </tr>
+  
+    </tbody>
+  </table>
+</div>
+
+
+
+  <div class="row">
+  
+
+  <input type="button" value="ADD ACCOUNT"  (click)="newAccount()"  class="btn btn-success">
+
+
+
+  <table class="table table-bordered table-striped table-hover table-responsive">
+  <caption> <h3>  {{title}}</h3>  </caption>
+      <thead>
+  <tr>
+      <th>ACCNO</th>
+      <th>NAME</th>
+      <th>BALANCE</th>
+      <th>EDIT</th>
+      <th>DELETE</th>
+      </tr>
+  </thead>
+  
+  <tbody>
+  <tr *ngFor="let a of accounts">
+      <td>{{a.accno}}</td>
+      <td>{{a.name|titlecase}}</td>
+      <td>{{a.balance|number}}</td>
+      <td><input type="button" value="EDIT"  (click)="getAccount(a.accno)"  class="btn btn-success"></td>
+      <td><input type="button" value="DELETE" (click)="deleteAccount(a.accno)"  class="btn btn-info"></td>
+    </tr>
+   </tbody>
+   </table>
+    
+  
+  </div>
+  
+  
+  
+  
+  
+  </div>
+  

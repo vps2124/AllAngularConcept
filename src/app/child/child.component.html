@@ -1,0 +1,13 @@
+<div>
+  <h2>
+  
+  {{title}}
+  <br/><br/>
+  Child Message  :<input [(ngModel)]="message" name="message"  (keyup)="sendMessageToParent()"  />
+  <br/><br/>
+  Child Message :{{message}}
+  <br/><br/>
+  Child receiving message from parent :{{parentMessage}}
+  
+  </h2>
+  </div>

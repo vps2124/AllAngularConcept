@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/home">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+       <li><a routerLink="/basics">Angular 5 Basics</a></li>
+       <li><a routerLink="/pipes">Angular 5 Pipes</a></li>
+       <li><a routerLink="/technologies">Technologies</a></li>
+       <li><a routerLink="/accounts">Accounts CRUD</a></li>
+       <li class="active" routerLink="/casestudy"><a >Angular 5 Case Study</a></li>
+       <li><a routerLink="/custom-directives">Custom Directives</a></li>
+      <li><a routerLink="/nested-component">Nested Components</a></li>
+      <li><a routerLink="/parent-child-comm">Parent Child Communication</a></li>
+      <li><a routerLink="/form-validation">Form Validation</a></li>
+      <li><a routerLink="/animation">Animation</a></li>
+      <li><a routerLink="/testing">Testing</a></li>
+      <li><a routerLink="/flight-booking">Flight Booking</a></li>
+     </ul>
+  </div>
+</nav>
+<section>
+
+<router-outlet></router-outlet>
+
+
+</section>

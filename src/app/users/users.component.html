@@ -1,0 +1,61 @@
+<div class="container" *ngIf="user;else nav">
+  
+  <div class="row">
+  
+    <table class="table table-bordered table-striped table-hover table-responsive">
+  <caption> <h3>  {{title}}</h3>  </caption>
+  <tbody>
+
+    <tr>
+      <th>ID</th>
+      <td>{{user.id}}</td>
+   </tr>
+   <tr>
+    <th>NAME</th>
+    <td>{{user.name}}</td>
+ </tr>
+ <tr>
+  <th>EMAIL</th>
+  <td>{{user.email}}</td>
+</tr>
+<tr>
+  <th>CITY</th>
+  <td>{{user.address.city}}</td>
+</tr>
+<tr>
+  <th>COMPANY</th>
+  <td>{{user.company.name}}</td>
+</tr>
+ </tbody>
+  </table>
+</div>
+</div>
+  
+
+<ng-template #nav>
+  <div>
+    <h3>
+    {{title}}
+  </h3>
+  </div>
+
+<div>
+<nav class="navbar navbar-default navbar-inverse">
+<ul class="nav navbar-nav">
+<li><a routerLink="list">Users List</a></li>
+<li><a routerLink="table">Users Table</a></li>
+</ul>
+
+</nav>
+</div>
+</ng-template>
+
+
+<section>
+  <router-outlet></router-outlet>
+</section>
+      
+  
+  
+  
+  

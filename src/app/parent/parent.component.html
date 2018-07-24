@@ -1,0 +1,19 @@
+<div>
+<h2>
+
+{{title}}
+<br/><br/>
+Parent Message  :<input [(ngModel)]="message" name="message"/>
+<br/><br/>
+Parent Message :{{message}}
+<br/><br/>
+
+Parent Receving message from Child :{{childMessage}}
+
+</h2>
+
+
+<app-child [parentMessage]="message"   (childChanged)="childMessage=$event"    ></app-child>
+
+
+</div>

@@ -1,0 +1,27 @@
+<div>
+  <h1>{{title}}
+    </h1>
+</div>
+
+Select Foreground color :
+<select [(ngModel)]="fcolor"  name="fcolor">
+<option *ngFor="let c of fcolors">{{c}}</option>
+</select>
+
+<br/><br/>
+
+Show /Hide Div <input type="checkbox" [(ngModel)]="show"/>
+<br/><br/> 
+
+
+<div [fgColor]="fcolor"  *ngShow="show">
+  
+<h3 [fgColor]="'red'"> Welcome To Custom Directive Example</h3>
+ <h3>Welcome To Custom Directive Example</h3>
+<h3>Welcome To Custom Directive Example</h3>
+  
+
+</div>
+
+
+

@@ -1,0 +1,32 @@
+<h1>
+  {{title}}
+</h1>
+<hr/>
+
+<!-- From: -->
+<div class="container color-light"> 
+
+<!-- From: -->
+<p class="life-container" *ngFor="let goal of goals" (click)="removeItem(i)">
+{{goal}}
+  </p>
+    
+</div>
+    
+    <!-- To: -->
+<div class="container color-light" [@goals]="goals.length">
+
+    <!-- To: -->
+<p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+   {{goal}}
+      
+</p>
+
+</div>
+
+    
+
+
+
+
+

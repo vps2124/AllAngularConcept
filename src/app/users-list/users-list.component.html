@@ -1,0 +1,15 @@
+<div>
+<h2>{{title}}</h2>
+</div>
+
+<hr/>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" *ngFor="let u of users">
+  <a [routerLink]="['/casestudy/users',u.id]">
+   
+    {{u.username}}
+   
+  </a>
+  
+  </li>
+</ul>
